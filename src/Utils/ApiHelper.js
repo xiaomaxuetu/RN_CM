@@ -1,20 +1,30 @@
 /**
  * Created by cmios on 2017/7/14.
  */
-const getFetch = (url)=>{
-    const fetchFunc = () =>{
+export const getFetch = (url)=>{
+
         return fetch(url,{
             method:'GET',
             headers:{
                 Accept:'*/*',
                 'Content-Type':'application/json'
             }
-        }).then(convertRespToJson)
-    };
-    return fetchFunc;
+        }).then(convertRespToJson).catch(defaultAnalyse)
+}
+export const postFetch = url=> jsonData =>{
+    return fetch(url,{
+        method:'POST',
+        headers:{
+            Accept:'*/*',
+            'Content-Type':'application/json'
+        },
+        body:jsonData
+    }).then(convertRespToJson).catch(defaultAnalyse)
 }
 const convertRespToJson = response => {
     return response.json();
 };
 
-export const getFet = getFetch()
+const defaultAnalyse =response=>{
+
+}

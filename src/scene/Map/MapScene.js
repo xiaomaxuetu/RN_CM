@@ -1,7 +1,12 @@
 import React, { PureComponent} from 'react'
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ListView, Image, StatusBar, FlatList } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ListView, Image, StatusBar, FlatList,Dimensions } from 'react-native'
 import MapView from '../../component/MapView'
 import { screen,system } from '../../common'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux';
+import {changeMusicControlModalVisbility} from '../../actions/mapView';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 class MapScene extends PureComponent{
     constructor(props){
@@ -10,9 +15,23 @@ class MapScene extends PureComponent{
     componentDidMount(){
 
     }
+    showTaskDetail(event){
+        const events = event.nativeEvent;
+        // const naviagtion = this.props.navigation;
+        this.props.navigation.navigate('PatrolFeedback')
+    }
     render(){
+        const  {polylinelist,polypointlist} = this.props;
             return(
-                <MapView style={styles.container}/>
+                <MapView
+                    style={styles.container}
+                    showLogo={false}
+                    offlineMapUrl={{'offline':'/Users/cmios/Desktop/MapGIS_Mobile_iOS_SDK/demos/data/MapGIS/map/wuhan/wuhan.xml'}}
+                    annArray={{'offline':'offline'}}
+                    polylinArray={polylinelist}
+                    polypointArray={polypointlist}
+                    onClickAnnViewCallback={(event)=>{this.showTaskDetail(event)}}
+                />
             );
     }
 
@@ -26,4 +45,12 @@ const styles = StyleSheet.create({
         width:screen.width,
     }
 });
-export default MapScene;
+const mapStateToProps = state => {
+    let MapView = state.mapView;
+    let isMapViewControlModalShow = MapView.isMapViewControlModalShow;
+    let polylinelist = MapView.polylinelist;
+    let polypointlist = MapView.polypointlist;
+    let navigation = MapView.navigation;
+    return{isMapViewControlModalShow,polylinelist,polypointlist,navigation}
+}
+export default connect(mapStateToProps)(MapScene);

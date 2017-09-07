@@ -5,6 +5,7 @@ const initState = {
     polylinelist:{},
     polygonlist:{},
     annList:{},
+    navigation:{},
 };
 export default function mapReducer(state = initState,action) {
     switch (action.type){
@@ -27,6 +28,10 @@ export default function mapReducer(state = initState,action) {
         case ACTIONS.CHANGE_MAP_CONTROL_ANN_LIST:
             return Object.assign({},state,{
                 polypointlist:action.polypointlist
+            });
+        case ACTIONS.GET_MAP_CONTROL_NAVIGATION:
+            return Object.assign({},state,{
+                navigation:action.navigation
             });
         default:
             return state;

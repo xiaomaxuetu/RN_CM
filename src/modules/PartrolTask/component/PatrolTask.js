@@ -7,8 +7,8 @@ import { screen } from '../../../common/index'
 import ParTrolTaskItem from './PartrolTaskItem'
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {changeMusicControlModalVisbility,changeMapControlPolylineList,changeMapControlPolypointList} from '../../../actions/mapView';
-
+import {changeMusicControlModalVisbility,changeMapControlPolylineList,changeMapControlPolypointList,getMapControlNavigation} from '../../../actions/mapView';
+import {getFetch,postFetch} from '../../../Utils/ApiHelper'
 class PatrolTask extends PureComponent{
     constructor(props){
         super(props)
@@ -67,7 +67,6 @@ class PatrolTask extends PureComponent{
         }
     }
     async requestRecommend(){
-
         try{
             let response = await fetch(PartrolTaskApi(this.state.currentPage))
             let json = await response.json()
@@ -100,8 +99,10 @@ class PatrolTask extends PureComponent{
     onCellSelected(item){
 
         this.props.changeMusicControlModalVisibility(true);
+        this.props.getMapControlNavigation(this.props.navigation);
         this.requestAreaList(item).then().catch();
         this.requestAreaPoints(item).then().catch();
+        this.props.navigation.navigate('Maps')
 
     }
     keyExtractor(item, index) {
@@ -149,7 +150,9 @@ const mapDispatchToProps = dispatch =>{
     return{
         changeMusicControlModalVisibility: bindActionCreators(changeMusicControlModalVisbility, dispatch),
         changeMapControlPolylineList:bindActionCreators(changeMapControlPolylineList, dispatch),
-        changeMapControlPolypointList:bindActionCreators(changeMapControlPolypointList,dispatch)
+        changeMapControlPolypointList:bindActionCreators(changeMapControlPolypointList,dispatch),
+        getMapControlNavigation:bindActionCreators(getMapControlNavigation,dispatch)
+
 
     }
 }

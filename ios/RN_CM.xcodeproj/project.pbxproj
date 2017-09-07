@@ -36,13 +36,10 @@
 		2DCD954D1E0B4F2C00145EB5 /* RN_CMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RN_CMTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8529F0261F25D20E00E86171 /* MapGIS_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0251F25D20E00E86171 /* MapGIS_Mobile.framework */; };
 		8529F0291F25D91700E86171 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0281F25D91700E86171 /* libxml2.2.tbd */; };
 		8529F02B1F25D93600E86171 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F02A1F25D93600E86171 /* libz.1.tbd */; };
 		8529F02D1F25D94600E86171 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F02C1F25D94600E86171 /* libz.1.2.8.tbd */; };
 		8529F02F1F25D95100E86171 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F02E1F25D95100E86171 /* libz.tbd */; };
-		8529F0311F25D9FC00E86171 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0301F25D9FC00E86171 /* libc++.1.dylib */; };
-		8529F0331F25DA2200E86171 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0321F25DA2200E86171 /* libstdc++.6.0.9.dylib */; };
 		8529F0351F25DA4A00E86171 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0341F25DA4A00E86171 /* UIKit.framework */; };
 		8529F0371F25DA5A00E86171 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0361F25DA5A00E86171 /* SystemConfiguration.framework */; };
 		8529F0391F25DA6500E86171 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0381F25DA6500E86171 /* QuartzCore.framework */; };
@@ -55,7 +52,6 @@
 		8529F0471F25DABF00E86171 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0461F25DABF00E86171 /* AudioToolbox.framework */; };
 		8529F0491F25DAC900E86171 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F0481F25DAC900E86171 /* CoreTelephony.framework */; };
 		8529F04B1F25DAD700E86171 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F04A1F25DAD700E86171 /* CoreMotion.framework */; };
-		8529F04D1F25DB0000E86171 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529F04C1F25DB0000E86171 /* libz.1.dylib */; };
 		85541E291F1F403900FCBDBD /* RNTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85541E281F1F403900FCBDBD /* RNTManager.m */; };
 		857518971F566BFF00F3482E /* RNMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 857518961F566BFF00F3482E /* RNMapView.m */; };
 		857DAC0B1F58F12400DD7303 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 857DABF81F58F12400DD7303 /* MJExtensionConst.m */; };
@@ -72,6 +68,10 @@
 		857DAC1C1F58F50C00DD7303 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 857DAC1B1F58F50C00DD7303 /* MapPoint.m */; };
 		857DAC1F1F59307800DD7303 /* PartrolScanTaskPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 857DAC1E1F59307800DD7303 /* PartrolScanTaskPointModel.m */; };
 		857DAC221F59325000DD7303 /* RNAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 857DAC211F59325000DD7303 /* RNAnnotation.m */; };
+		857FB85C1F60DBD800697778 /* MapGIS_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FB85B1F60DBD800697778 /* MapGIS_Mobile.framework */; };
+		857FB8691F60DD0F00697778 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FB8681F60DD0F00697778 /* libz.1.dylib */; };
+		857FB86B1F60DD7500697778 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FB86A1F60DD7500697778 /* libstdc++.6.0.9.dylib */; };
+		857FB86D1F60DD9F00697778 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FB86C1F60DD9F00697778 /* libc++.1.dylib */; };
 		85FB005A1F5FE7F00056F616 /* RNAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FB00591F5FE7F00056F616 /* RNAnnotationView.m */; };
 /* End PBXBuildFile section */
 
@@ -320,13 +320,10 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		8529F0251F25D20E00E86171 /* MapGIS_Mobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapGIS_Mobile.framework; sourceTree = "<group>"; };
 		8529F0281F25D91700E86171 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		8529F02A1F25D93600E86171 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
 		8529F02C1F25D94600E86171 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
 		8529F02E1F25D95100E86171 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		8529F0301F25D9FC00E86171 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
-		8529F0321F25DA2200E86171 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "../../../../../usr/lib/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
 		8529F0341F25DA4A00E86171 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8529F0361F25DA5A00E86171 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8529F0381F25DA6500E86171 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -339,7 +336,6 @@
 		8529F0461F25DABF00E86171 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8529F0481F25DAC900E86171 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		8529F04A1F25DAD700E86171 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		8529F04C1F25DB0000E86171 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		85541E271F1F403900FCBDBD /* RNTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTManager.h; sourceTree = "<group>"; };
 		85541E281F1F403900FCBDBD /* RNTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTManager.m; sourceTree = "<group>"; };
 		857518951F566BFF00F3482E /* RNMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMapView.h; sourceTree = "<group>"; };
@@ -373,6 +369,10 @@
 		857DAC1E1F59307800DD7303 /* PartrolScanTaskPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartrolScanTaskPointModel.m; sourceTree = "<group>"; };
 		857DAC201F59325000DD7303 /* RNAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAnnotation.h; sourceTree = "<group>"; };
 		857DAC211F59325000DD7303 /* RNAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAnnotation.m; sourceTree = "<group>"; };
+		857FB85B1F60DBD800697778 /* MapGIS_Mobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapGIS_Mobile.framework; sourceTree = "<group>"; };
+		857FB8681F60DD0F00697778 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		857FB86A1F60DD7500697778 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "../../../../../../usr/lib/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
+		857FB86C1F60DD9F00697778 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		85FB00581F5FE7F00056F616 /* RNAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAnnotationView.h; sourceTree = "<group>"; };
 		85FB00591F5FE7F00056F616 /* RNAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAnnotationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -390,7 +390,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8529F04D1F25DB0000E86171 /* libz.1.dylib in Frameworks */,
+				857FB86D1F60DD9F00697778 /* libc++.1.dylib in Frameworks */,
+				857FB86B1F60DD7500697778 /* libstdc++.6.0.9.dylib in Frameworks */,
+				857FB8691F60DD0F00697778 /* libz.1.dylib in Frameworks */,
 				8529F04B1F25DAD700E86171 /* CoreMotion.framework in Frameworks */,
 				8529F0491F25DAC900E86171 /* CoreTelephony.framework in Frameworks */,
 				8529F0471F25DABF00E86171 /* AudioToolbox.framework in Frameworks */,
@@ -403,8 +405,6 @@
 				8529F0391F25DA6500E86171 /* QuartzCore.framework in Frameworks */,
 				8529F0371F25DA5A00E86171 /* SystemConfiguration.framework in Frameworks */,
 				8529F0351F25DA4A00E86171 /* UIKit.framework in Frameworks */,
-				8529F0331F25DA2200E86171 /* libstdc++.6.0.9.dylib in Frameworks */,
-				8529F0311F25D9FC00E86171 /* libc++.1.dylib in Frameworks */,
 				8529F02F1F25D95100E86171 /* libz.tbd in Frameworks */,
 				8529F02D1F25D94600E86171 /* libz.1.2.8.tbd in Frameworks */,
 				8529F02B1F25D93600E86171 /* libz.1.tbd in Frameworks */,
@@ -413,6 +413,7 @@
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				857FB85C1F60DBD800697778 /* MapGIS_Mobile.framework in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
@@ -420,7 +421,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				8529F0261F25D20E00E86171 /* MapGIS_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +634,10 @@
 		8529F0271F25D91700E86171 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8529F04C1F25DB0000E86171 /* libz.1.dylib */,
+				857FB86C1F60DD9F00697778 /* libc++.1.dylib */,
+				857FB86A1F60DD7500697778 /* libstdc++.6.0.9.dylib */,
+				857FB8681F60DD0F00697778 /* libz.1.dylib */,
+				857FB85B1F60DBD800697778 /* MapGIS_Mobile.framework */,
 				8529F04A1F25DAD700E86171 /* CoreMotion.framework */,
 				8529F0481F25DAC900E86171 /* CoreTelephony.framework */,
 				8529F0461F25DABF00E86171 /* AudioToolbox.framework */,
@@ -647,12 +650,9 @@
 				8529F0381F25DA6500E86171 /* QuartzCore.framework */,
 				8529F0361F25DA5A00E86171 /* SystemConfiguration.framework */,
 				8529F0341F25DA4A00E86171 /* UIKit.framework */,
-				8529F0321F25DA2200E86171 /* libstdc++.6.0.9.dylib */,
-				8529F0301F25D9FC00E86171 /* libc++.1.dylib */,
 				8529F02E1F25D95100E86171 /* libz.tbd */,
 				8529F02C1F25D94600E86171 /* libz.1.2.8.tbd */,
 				8529F02A1F25D93600E86171 /* libz.1.tbd */,
-				8529F0251F25D20E00E86171 /* MapGIS_Mobile.framework */,
 				8529F0281F25D91700E86171 /* libxml2.2.tbd */,
 			);
 			name = Frameworks;

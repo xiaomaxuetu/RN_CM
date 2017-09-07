@@ -15,6 +15,7 @@ import {createStore,applyMiddleware} from 'redux'
 import {createLogger} from 'redux-logger'
 import  reducers from './reducers'
 import MapControl from './component/MapViewControlModal'
+import PartrolTaskFeedback from './modules/PartrolTask/component/PartrolTaskFeedback'
 
 
 const lightContentScenes = ['Home', 'Mine']
@@ -61,7 +62,7 @@ class RootScene extends PureComponent {
     render(){
         return(
             <View style={styles.container}>
-                <MapControl/>
+                {/*<MapControl/>*/}
                 <Navigator
                     onNaviagtionStateChange={
                         (prevState,currentState)=>{
@@ -143,7 +144,8 @@ const Tab = TabNavigator(
 
 const Navigator = StackNavigator(
     {
-        Tab:{screen:Tab}
+        Tab:{screen:Tab},
+        PatrolFeedback:{screen:PartrolTaskFeedback}
     },
     {
         navigationOptions:{

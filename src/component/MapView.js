@@ -47,4 +47,5 @@ var RNMapView = requireNativeComponent('RNTMap', MapView,{
 });
 
 
-module.exports = MapView;
+// module.exports = MapView;
+export default MapView;

@@ -9,7 +9,8 @@
 #import "RNMapView.h"
 #import "MapTool.h"
 
-
+#define SCREEN_HEIGRHT [[UIScreen mainScreen] bounds].size.height
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 @implementation RNMapView
 {
   MapView *_mapView;
@@ -23,7 +24,7 @@
   
   if (self) {
     
-    _mapView = [[MapView alloc]initWithFrame:CGRectMake(0, 0, 375, 600)];
+    _mapView = [[MapView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGRHT-113)];
     _mapView.delegate = self;
     
     [self addSubview:_mapView];
@@ -41,6 +42,7 @@
   NSString *mapUrl = [offlineMapUrl objectForKey:@"offline"];
   
   [_mapView loadFromFile:mapUrl];
+  [_mapView refresh];
   
 }
 -(void)setAnnArray:(NSDictionary *)annArray{

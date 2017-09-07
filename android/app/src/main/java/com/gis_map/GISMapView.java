@@ -94,13 +94,21 @@ public class GISMapView extends FrameLayout implements MapView.MapViewMapLoadLis
 
     @Override
     public AnnotationView mapViewViewForAnnotation(MapView mapView, Annotation annotation) {
-        AnnotationView ann = new AnnotationView(annotation,mapView.getContext());
+        AnnotationView ann = new AnnotationView(annotation,getContext());
+        ann.getCalloutTitleTextView().setTextColor(Color.BLUE);
+        ann.getCalloutDescriptionTextView().setTextColor(Color.BLACK);
+
+        // 设置 callout 相对于标注或视图点的偏移量
+         ann.setCalloutOffset(new Point(0, 15));
+         ann.getCalloutDescriptionTextView().setSingleLine(false);
+// 将      annotationview 平移到视图中心
+        ann.setPanToMapViewCenter(true);
         return ann;
     }
 
     @Override
     public boolean mapViewWillHideAnnotationView(MapView mapView, AnnotationView annotationView) {
-        return true;
+        return false;
     }
 
     @Override
@@ -110,7 +118,6 @@ public class GISMapView extends FrameLayout implements MapView.MapViewMapLoadLis
 
     @Override
     public void mapViewClickAnnotation(MapView mapView, Annotation annotation) {
-
 
     }
 

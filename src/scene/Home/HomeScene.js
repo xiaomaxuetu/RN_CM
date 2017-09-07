@@ -19,7 +19,7 @@ class HomeScene extends PureComponent{
     }
     render(){
         return(
-            <PatrolTaskScene/>
+            <PatrolTaskScene navigation={this.props.navigation}/>
         );
     }
 

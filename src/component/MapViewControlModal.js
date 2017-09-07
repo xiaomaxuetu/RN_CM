@@ -21,36 +21,34 @@ class MapViewControlModal extends PureComponent{
     }
     showTaskDetail(event){
         const events = event.nativeEvent;
+        // const naviagtion = this.props.navigation;
+        this.props.navigation.navigate('PatrolFeedback')
     }
     render(){
         const  {polylinelist,isMapViewControlModalShow,polypointlist} = this.props;
         return(
                 <Modal
-                    animationType={"slide"}
+                    animationType={"fade"}
                     transparent={true}
                     visible={isMapViewControlModalShow}
                     onRequestClose={() => {alert("Modal has been closed.")}}
                 >
                     <View>
-                        <View>
-                            <MapView
-                                style={{height:windowHeight-50,width:windowWidth}}
-                                showLogo={false}
-                                offlineMapUrl={{'offline':'/Users/cmios/Desktop/MapGIS_Mobile_iOS_SDK/demos/data/MapGIS/map/wuhan/wuhan.xml'}}
-                                annArray={{'offline':'offline'}}
-                                polylinArray={polylinelist}
-                                polypointArray={polypointlist}
-                                onClickAnnViewCallback={(event)=>{this.showTaskDetail(event)}}
-
-                            />
-                            <TouchableHighlight onPress={() => {
-                                this.setModalVisible(!this.state.modalVisible)
-                            }}>
-                                <Text>Hide Modal</Text>
-                            </TouchableHighlight>
-
-                        </View>
+                        <MapView
+                            style={{height:windowHeight/2,width:windowWidth}}
+                            showLogo={false}
+                            offlineMapUrl={{'offline':'/Users/cmios/Desktop/MapGIS_Mobile_iOS_SDK/demos/data/MapGIS/map/wuhan/wuhan.xml'}}
+                            annArray={{'offline':'offline'}}
+                            polylinArray={polylinelist}
+                            polypointArray={polypointlist}
+                            onClickAnnViewCallback={(event)=>{this.showTaskDetail(event)}}
+                        />
                     </View>
+                    <TouchableOpacity
+                        style={styles.bottomTouchableOpacity}
+                        onPress={() => {
+                            this.setModalVisible(!this.state.modalVisible)
+                        }}/>
                 </Modal>
         );
     }
@@ -63,6 +61,9 @@ const styles = StyleSheet.create({
     androidMap:{
         flex:1,
         width:screen.width,
+    },bottomTouchableOpacity: {
+        backgroundColor: '#00000088',
+        flex: 1
     }
 });
 const mapStateToProps = state => {
@@ -70,7 +71,8 @@ const mapStateToProps = state => {
     let isMapViewControlModalShow = MapView.isMapViewControlModalShow;
     let polylinelist = MapView.polylinelist;
     let polypointlist = MapView.polypointlist;
-    return{isMapViewControlModalShow,polylinelist,polypointlist}
+    let navigation = MapView.navigation;
+    return{isMapViewControlModalShow,polylinelist,polypointlist,navigation}
 }
 const mapDispatchToProps = dispatch =>{
     return{

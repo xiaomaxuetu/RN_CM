@@ -4,7 +4,8 @@ export const ACTIONS = {
     CHANGE_MAP_CONTROL_ANN_LIST:'CHANGE_MAP_CONTROL_ANN_LIST',
     CHANGE_MAP_CONTROL_POLYLINE_LIST:'CHANGE_MAP_CONTROL_POLYLINE_LIST',
     CHNAGE_MAP_CONTROL_POLYPOINT_LIST:'CHNAGE_MAP_CONTROL_POLYPOINT_LIST',
-    CHNAGE_MAP_CONTROL_POLYGON_LIST:'CHNAGE_MAP_CONTROL_POLYGON_LIST'
+    CHNAGE_MAP_CONTROL_POLYGON_LIST:'CHNAGE_MAP_CONTROL_POLYGON_LIST',
+    GET_MAP_CONTROL_NAVIGATION:'GET_MAP_CONTROL_NAVIGATION'
 }
 
 export function changeMusicControlModalVisbility(visible) {
@@ -36,4 +37,11 @@ export function changeMapControlPolygonList(polygonlist) {
         type:ACTIONS.CHNAGE_MAP_CONTROL_POLYGON_LIST,
         polygonlist
     };
+}
+export function getMapControlNavigation(navigation) {
+    return{
+        type:ACTIONS.GET_MAP_CONTROL_NAVIGATION,
+        navigation
+    };
+
 }

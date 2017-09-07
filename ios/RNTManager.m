@@ -19,7 +19,7 @@ RCT_EXPORT_MODULE(RNTMap)
 //  MapView *mapView = [[MapView alloc]init];
 //  [mapView loadFromFile:@"/Users/cmios/Desktop/MapGIS_Mobile_iOS_SDK/demos/data/MapGIS/map/wuhan/wuhan.xml"];
 //  return mapView;
-  RNMapView *mapView = [[RNMapView alloc]init];
+  RNMapView *mapView = [[RNMapView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
   mapView.delegate = self;
   
   return mapView;

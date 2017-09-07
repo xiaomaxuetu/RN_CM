@@ -34,6 +34,7 @@ public class MapTool {
 
 
 
+        MapTool.cleanMap(mapView.mapView);
         HashMap<String,Object> hashMap = map.toHashMap();
 
         if (hashMap.containsKey("partrolScan")){
@@ -205,7 +206,7 @@ public class MapTool {
         }
 
     }
-    public void cleanMap(MapView mapView){
+    public static void cleanMap(MapView mapView){
         mapView.getGraphicsOverlay().removeAllGraphics();
         mapView.getAnnotationsOverlay().removeAllAnnotations();
         mapView.refresh();
