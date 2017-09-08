@@ -17,8 +17,9 @@ class MapScene extends PureComponent{
     }
     showTaskDetail(event){
         const events = event.nativeEvent;
+        const taskPoint = events["partrolScan"]
         // const naviagtion = this.props.navigation;
-        this.props.navigation.navigate('PatrolFeedback')
+        this.props.navigation.navigate('PatrolFeedback',{info:JSON.stringify(taskPoint)})
     }
     render(){
         const  {polylinelist,polypointlist} = this.props;

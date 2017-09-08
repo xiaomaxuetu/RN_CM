@@ -22,7 +22,8 @@ export const postFetch = url=> jsonData =>{
     }).then(convertRespToJson).catch(defaultAnalyse)
 }
 const convertRespToJson = response => {
-    return response.json();
+    const json =response.json();
+    return json;
 };
 
 const defaultAnalyse =response=>{
