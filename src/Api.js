@@ -12,6 +12,7 @@ export function PartrolTaskAreaApi(userid){
 export function PartrolTaskAreaPoints(userid){
     return `https://pipenet.enn.cn:8000/dongguan/cityinterface/Services/MapGISCitySvr_Patrol_Standard/REST/PatrolStandardRest.svc/GetTaskPointAttr?id=${userid}&time=`
 }
-export function PattrolTaskFeedbackDetail() {
-    return`http://192.168.12.6:8091/cityinterface/Services/Zondy_MapGISCitySvr_CaseManage/REST/CaseManageREST.svc/GetFeedbackTableInfo?layerName=${layerName}&flowName=${flowName}&nodeName=${nodeName}&feedbackID=${feedbackID}&defaultParam=GIS%E5%9B%BE%E5%B1%82%3A%E5%BA%AD%E9%99%A2%E7%82%B9%3BGIS%E7%BC%96%E5%8F%B7%3ATYD00000107%3BGIS%E5%9D%90%E6%A0%87%3A372897.974270%2C543477.375009`
+export function PattrolTaskFeedbackDetail(layerName,flowName,nodeName,feedbackID,defaultParams) {
+    const url =`https://pipenet.enn.cn:8000/dongguan/cityinterface/Services/Zondy_MapGISCitySvr_CaseManage/REST/CaseManageREST.svc/GetFeedbackTableInfo?layerName=${layerName}&flowName=${flowName}&nodeName=${nodeName}&feedbackID=${feedbackID}&defaultParam=${defaultParams}`
+    return url;
 }

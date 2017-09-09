@@ -22,6 +22,7 @@ export default class PartrolTaskFeedback extends PureComponent{
     }
 
     render(){
+        let info = this.props.navigation.state.params.info
         const titles = ['反馈','属性']
         return(
             <ScrollableTabView
@@ -32,8 +33,8 @@ export default class PartrolTaskFeedback extends PureComponent{
                 tabBarTextStyle={styles.tabBarText}
                 tabBarUnderlineStyle={styles.tabBarUnderline}
             >
-                <Attr tabLabel="反馈"/>
-                <Feedback tabLabel="属性"/>
+                <Attr tabLabel="属性"/>
+                <Feedback tabLabel="反馈" keyPoint={info}/>
             </ScrollableTabView>
         )
     }

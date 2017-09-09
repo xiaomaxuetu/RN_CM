@@ -10,6 +10,7 @@
 #import <MapGIS_Mobile/MapView.h>
 #import "RNMapView.h"
 #import "RNAnnotation.h"
+#import "MJExtension.h"
 
 @implementation RNTManager
 RCT_EXPORT_MODULE(RNTMap)
@@ -40,7 +41,8 @@ RCT_EXPORT_VIEW_PROPERTY(onCenterChangeCallback, RCTBubblingEventBlock)
     return;
   }
   RNAnnotation *ann = (RNAnnotation *)annView.annotation;
-  mapView.onClickAnnViewCallback(@{@"partrolScan":@"dashini"});
+  NSDictionary *annDictionary = [ann.TaskPointModel mj_keyValues];
+  mapView.onClickAnnViewCallback(@{@"partrolScan":annDictionary});
   
 }
 
