@@ -26,7 +26,7 @@ class MapScene extends PureComponent{
                 <MapView
                     style={styles.container}
                     showLogo={false}
-                    offlineMapUrl={{'offline':'/Users/cmios/Desktop/MapGIS_Mobile_iOS_SDK/demos/data/MapGIS/map/wuhan/wuhan.xml'}}
+                    offlineMapUrl={{'offline':'/Users/myx/Downloads/MapGIS_Mobile_iOS_SDK/demos/data/MapGIS/map/wuhan/wuhan.xml'}}
                     annArray={{'offline':'offline'}}
                     polylinArray={polylinelist}
                     polypointArray={polypointlist}
