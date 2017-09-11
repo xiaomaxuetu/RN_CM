@@ -33,7 +33,7 @@ export default class PartrolTaskFeedback extends PureComponent{
                 tabBarTextStyle={styles.tabBarText}
                 tabBarUnderlineStyle={styles.tabBarUnderline}
             >
-                <Attr tabLabel="属性"/>
+                <Attr tabLabel="属性" keyPoint={info}/>
                 <Feedback tabLabel="反馈" keyPoint={info}/>
             </ScrollableTabView>
         )
