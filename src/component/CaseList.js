@@ -16,8 +16,9 @@ export default class CaseList extends PureComponent{
     componentWillMount(){
     }
 
-    _renderItem(item){
-        return <CaseItem item={item}/>
+    _renderItem(item,Values){
+
+        return <CaseItem schema={item} Values={Values} scan={false}/>
     }
     _renderSectionHeader(section){
 
@@ -26,6 +27,9 @@ export default class CaseList extends PureComponent{
                 <Text style={styles.sectionHeader} >{section.section.key}</Text>
             </View>
         )
+    }
+    _extraUniqueKey(item ,index){
+        return "index"+index+item;
     }
     /*[
         { data: [{ title: "nidaye" }], key: "s1" },
@@ -62,10 +66,10 @@ export default class CaseList extends PureComponent{
         return(
             <View>
                 <SectionList
-                    renderItem={this._renderItem}
+                    renderItem={item=>{return(this._renderItem(item,Values))}}
                     renderSectionHeader={this._renderSectionHeader}
                     sections={sectionGroup}
-
+                    keyExtractor = {this._extraUniqueKey}
                 />
             </View>
         )
